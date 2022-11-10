@@ -558,6 +558,14 @@ async fn axum(
 }
 ```
 
+We also have to create the Sessions table using SQL, the code is as follows:
+```bash
+Create Table Sessions(
+        id VarCHAR(6) PRIMARY KEY,
+        session_token VArChar(6)
+);
+```
+
 #### Getting middleware and displaying our user info
 
 Modifying our index Tera template, we can add an "if block" to show a status if the user is logged in.
